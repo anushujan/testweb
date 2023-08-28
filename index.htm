@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Cards</title>
+    <style>
+
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e20404;
+  background-image: radial-gradient(white, #e20404);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header,
+nav,
+main,
+footer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+header,
+footer {
+  position: sticky;
+  background-color: #e20404;
+  color: white;
+}
+header{
+  top:0;
+}
+footer{
+  bottom: 0;
+}
+/* nav bar start */
+nav {
+  display: inline-block;
+  background-color: white;
+  padding: 0.5rem;
+  box-shadow: 0 0 6px black;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  display: inline-block;
+  margin-inline: 0.5rem;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+/* nav bar end */
+
+main {
+  flex-grow: 1;
+  margin: 2rem;
+}
+.container {
+  min-width: 200px;
+  min-height: 500px;
+  display: flex;
+  margin-inline: auto;
+  gap: 20px;
+  place-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*   border: 2px solid gold; */
+}
+
+.box {
+  background-image: linear-gradient(red, white);
+  border: 2px solid black;
+  padding: 2rem;
+  height: 400px;
+  min-width: 250px;
+  width: 300px;
+  border-radius: 20px;
+  place-content: center;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 40px;
+  box-shadow: 0 0 6px black;
+}
+img {
+  border-radius: 50%;
+  border: 5px solid #e20404;
+  box-shadow: 0 -5px 6px black;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 684px) {
+  nav {
+    display: none;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Profile Card</h1>
+      <nav>
+        <ul>
+          <li><a href="#tony">Tony Stark</a></li>
+          <li><a href="#peter"> Peter Parkar</a></li>
+          <li><a href="#steve"> Steve Rogers</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="box" id="tony">
+          <img src="tony.png" alt="profile_pic" width="200" height="200" />
+          <h3>Tony Stark</h3>
+          <p>"I am Ironman"</p>
+        </div>
+        <div class="box" id="peter">
+          <img src="peter.jpg" alt="profile_pic" width="200" height="200" />
+          <h3>Peter Parker</h3>
+          <p>"Neighborhood spiderman"</p>
+        </div>
+        <div class="box" id="steve">
+          <img src="steve.jpeg" alt="profile_pic" width="200" height="200" />
+          <h3>Steve Rogers</h3>
+          <p>"Captain America"</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h2>&copy; MARVEL</h2>
+    </footer>
+  </body>
+</html>
